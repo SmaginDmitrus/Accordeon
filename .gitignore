@@ -1,0 +1,41 @@
+# Сборка и зависимости
+target/
+build/
+.gradle/
+.mvn/
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*.swo
+
+# Базы данных и среды
+*.db
+*.sqlite
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Docker
+docker-compose.override.yml
+
+# Логи
+*.log
+logs/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
