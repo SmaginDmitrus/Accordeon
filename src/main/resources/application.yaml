@@ -1,3 +1,5 @@
 spring:
+  jpdb:
+
   application:
     name: accordeon
