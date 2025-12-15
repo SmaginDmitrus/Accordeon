@@ -2,6 +2,7 @@ package com.git.smagindmitrus.accordeon.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 
@@ -12,6 +13,7 @@ import java.util.List;
 @Data
 public class Song {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String author;
     private List<String> lyrics;
