@@ -1,24 +1,35 @@
 package com.git.smagindmitrus.accordeon.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.processing.Generated;
 import java.util.List;
 
-@Component
 @Entity
+@Table(name = "songs")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Song {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String author;
-    private String lyrics;
-    private String chords;
 
+    @Column(nullable = false)
+    private String title;
+
+    @Column(nullable = false)
+    private String artist;
+
+    @Column(columnDefinition = "TEXT")
+    private String lyrics;
+
+    @Column(name = "chords_text")
+    private String chordsText; // Аккорды в виде текста
+
+    // Можно добавить больше полей: жанр, сложность, дата добавления и т.д.
 }
