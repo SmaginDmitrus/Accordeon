@@ -14,7 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class SongController {
 
-    private final SongService songService;
+    private final SongService songService; //зависимость внедряется через конструктор, который создаст lombok на этапе компиляции
 
     @PostMapping
     public ResponseEntity<Song> addSong(@RequestBody Song song) {
